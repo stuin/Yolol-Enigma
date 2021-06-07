@@ -29,6 +29,12 @@
 			<string>comment.line.number_sign.yolol</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>.......................................................................</string>
+			<key>name</key>
+			<string>invalid.length.yolol</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>"</string>
 			<key>beginCaptures</key>
