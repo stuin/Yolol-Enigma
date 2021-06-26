@@ -1,0 +1,12 @@
+if:sdec theno=:o/30 :m="" :sdec=0else goto 1 end
+i=o%30-1 o/=30 l=i/3 c=i%3 goto(3+l)*(o>0)
+ifc<1then:m+=" "else ifc<2then:m+=","else:m+="."endend goto 2
+ifc<1then:m+="?"else ifc<2then:m+="a"else:m+="b"endend goto 2
+ifc<1then:m+="c"else ifc<2then:m+="d"else:m+="e"endend goto 2
+ifc<1then:m+="f"else ifc<2then:m+="g"else:m+="h"endend goto 2
+ifc<1then:m+="i"else ifc<2then:m+="j"else:m+="k"endend goto 2
+ifc<1then:m+="l"else ifc<2then:m+="m"else:m+="n"endend goto 2
+ifc<1then:m+="o"else ifc<2then:m+="p"else:m+="q"endend goto 2
+ifc<1then:m+="r"else ifc<2then:m+="s"else:m+="t"endend goto 2
+ifc<1then:m+="u"else ifc<2then:m+="v"else:m+="w"endend goto 2
+ifc<1then:m+="x"else ifc<2then:m+="y"else:m+="z"endend goto 2
