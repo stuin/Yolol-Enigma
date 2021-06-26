@@ -1,0 +1,5 @@
+files=*.yolol
+
+tester=yodk debug enigma/*.yolol
+
+caching=s///g ; s:./::g

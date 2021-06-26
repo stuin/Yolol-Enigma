@@ -68,13 +68,13 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(not|abs|sqrt|sin|cos|tan|asin|acos|atan)</string>
+			<string>(goto|not|abs|sqrt|sin|cos|tan|asin|acos|atan)</string>
 			<key>name</key>
 			<string>support.function.yolol</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(if|then|else|end|goto)</string>
+			<string>(if|then|else|end)</string>
 			<key>name</key>
 			<string>keyword.control.yolol</string>
 		</dict>
