@@ -1,6 +1,6 @@
 :pw3=-1
-if :pw3==-1 then goto 2 end //Simulating pause for interpreter
-i=(:i+30)%30 l=i/5+4 n=i%5 goto l
+if :pw3==-1 then goto 2 end //Simulating pause
+i=(:i+30)%30 l=i/5+3 n=i%5 goto 1-l*:pw0
 :i=(n==0)*28+(n==1)*06+(n==2)*20+(n==3)*15+(n==4)*25 :pw2=0 goto1
 :i=(n==0)*13+(n==1)*01+(n==2)*08+(n==3)*07+(n==4)*19 :pw2=0 goto1
 :i=(n==0)*17+(n==1)*18+(n==2)*27+(n==3)*05+(n==4)*23 :pw2=0 goto1

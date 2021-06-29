@@ -1,4 +1,4 @@
-o=5 reset=3 num=0 add=4 :pw1=-1
+o=5 max=3 num=0 add=4 :pw1=-1
 if :pw1==-1 then goto 2 end //Simulating pause for interpreter
 i=(:i+o+30)%30 l=i/5+4 n=i%5 goto l
 :i=(n==0)*07+(n==1)*23+(n==2)*18+(n==3)*15+(n==4)*09 :pw2=0 goto10
@@ -7,7 +7,7 @@ i=(:i+o+30)%30 l=i/5+4 n=i%5 goto l
 :i=(n==0)*08+(n==1)*17+(n==2)*24+(n==3)*21+(n==4)*12 :pw2=0 goto10
 :i=(n==0)*16+(n==1)*10+(n==2)*19+(n==3)*00+(n==4)*05 :pw2=0 goto10
 :i=(n==0)*14+(n==1)*03+(n==2)*28+(n==3)*04+(n==4)*20 :pw2=0 goto10
-:pw1=-1
+if :pw0==0 then goto 1 else :pw1=-1 end
 if :pw1==-1 then goto 11 end //Simulating pause for interpreter
 i=(:i+30)%30 l=i/5+13 n=i%5 goto l
 :i=(n==0)*23+(n==1)*14+(n==2)*12+(n==3)*26+(n==4)*28-o :pw0=0 goto19
@@ -16,4 +16,4 @@ i=(:i+30)%30 l=i/5+13 n=i%5 goto l
 :i=(n==0)*03+(n==1)*20+(n==2)*16+(n==3)*02+(n==4)*22-o :pw0=0 goto19
 :i=(n==0)*29+(n==1)*18+(n==2)*13+(n==3)*01+(n==4)*17-o :pw0=0 goto19
 :i=(n==0)*05+(n==1)*07+(n==2)*09+(n==3)*27+(n==4)*11-o :pw0=0 goto19
-:pw1=-1 if num++>=reset then o+=add num=0 end goto 2
+:pw1=-1 if num++>=max then o+=add num=0 end goto 2
