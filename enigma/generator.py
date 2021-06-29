@@ -31,8 +31,8 @@ def show(name, li, wheel, line):
 	for i in range(6):
 		show_line(li, i, end)
 
-show("base:", base, 3, 10)
-show("reverse:", rev, 1, 19)
+show("base:", base, 3, 9)
+show("reverse:", rev, 1, 17)
 show("\nreflector:", ref, 2, 1)
 
 
