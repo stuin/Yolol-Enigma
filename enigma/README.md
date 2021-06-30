@@ -1,5 +1,6 @@
 # Enigma Machine simulator in yolol
 Attempt at simulating an enigma machine with a number of yolol chips
+Check out the [`ingame` branch](https://github.com/stuin/Yolol-Collection/tree/ingame/enigma) for the WIP linewait version
 
 ### Using Machine:
 - Number goes in with `:key` and answer ends up in `:out`
@@ -8,7 +9,7 @@ Attempt at simulating an enigma machine with a number of yolol chips
 - Refreshing and inputing the numbers from the log should result in the original inputs
 
 ### Implementation:
-- `:pw` variables and `:reset` should be replaced with `chipwait` in game but that is untested
+- `:pw` variables and `:reset` should be replaced with `linewait` in game but that is untested
 - generator.py can be used to create new randomized wheel and reflector files
 - `:pw` variables should go from 0 to the last chip and back again
 - each chip should have its own random starting values for `o`, `max`, `num` and `add`
