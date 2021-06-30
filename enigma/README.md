@@ -1,5 +1,6 @@
 # Enigma Machine simulator in yolol
-Attempt at simulating an enigma machine with a number of yolol chips
+Attempt at simulating an enigma machine with a number of yolol chips.
+
 Check out the [`ingame` branch](https://github.com/stuin/Yolol-Collection/tree/ingame/enigma) for the WIP linewait version
 
 ### Using Machine:
