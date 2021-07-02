@@ -1,5 +1,10 @@
 :log=""
-if:key then :i=:key :key=0 :pw1=0 :pw0=-1 else goto 2 end
-:out=(:i+30)%30 :log+=:out+"," goto 2
+if:key then :i=:key :pw1=0 :pw0=-1 else goto 2 end
+:key=(:i+30)%30 :log+=:key+","
 
+
+
+:key=0 goto 2
+19,15,14,7,1,14,18
+19,15,14,19,1,6,18
 //linewait=pw0

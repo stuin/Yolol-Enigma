@@ -1,4 +1,4 @@
-:reset=-1
-if :pw0==0 then :pw1=0 :log="" goto 1 else goto 2 end
+:reset=-2
+if :pw0==0 then :pw1=0 :log="" :reset=-2 end goto2
 
 //linewait=reset
