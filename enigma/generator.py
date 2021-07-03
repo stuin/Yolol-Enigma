@@ -16,6 +16,7 @@ for i in range(int(len(base)/2)):
 	l.remove(b)
 	ref[a] = b
 	ref[b] = a
+ref[l[0]] = l[0]
 
 s=":c=(n==0)*{:02d}+(n==1)*{:02d}+(n==2)*{:02d}+(n==3)*{:02d}+(n==4)*{:02d}{}"
 def show_line(li, i, end):
