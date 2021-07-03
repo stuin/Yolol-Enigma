@@ -16,4 +16,4 @@ if :i==ind then c=(:c+35)%35 l=c/5+12 n=c%5 else l=11 end goto l
 :c=(n==0)*01+(n==1)*22+(n==2)*24+(n==3)*10+(n==4)*19-o :i-- goto19
 :c=(n==0)*08+(n==1)*16+(n==2)*21+(n==3)*18+(n==4)*30-o :i-- goto19
 :c=(n==0)*07+(n==1)*13+(n==2)*11+(n==3)*29+(n==4)*20-o :i-- goto19
-if num++>=max then o=o%35+add num=0 :o2=o end goto 2
+if num++>=max then o=o%35+add num=0 end goto 2
