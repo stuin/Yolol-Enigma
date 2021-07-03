@@ -1,5 +1,8 @@
-:reset=-2
+:reset=-1 lastind=3
 if :reset<0 then goto2 end
-if :i>0 then :i=1 :log="" :reset=-2 end goto3
+if :i==-1 then :i=1 :c=1 :log="" else goto3 end
+if :i<lastind then goto4 end
 
-//linewait=reset
+:i=-1 :reset=-1 goto 2
+
+//chipwait=reset

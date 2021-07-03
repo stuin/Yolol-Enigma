@@ -7,8 +7,8 @@ if :i==ind then c=(:c+o+35)%35 l=c/5+3 n=c%5 else l=2 end goto l
 :c=(n==0)*30+(n==1)*18+(n==2)*33+(n==3)*04+(n==4)*34 :i++ goto10
 :c=(n==0)*16+(n==1)*00+(n==2)*01+(n==3)*12+(n==4)*14 :i++ goto10
 :c=(n==0)*15+(n==1)*19+(n==2)*21+(n==3)*03+(n==4)*32 :i++ goto10
-if :reset==-2 then goto 1 end
-if :i==ind then c=(:c+35)%35 l=c/5+12 n=c%5 else l=10 end goto l
+if :reset==0 then goto 1 end
+if :i==ind then c=(:c+35)%35 l=c/5+12 n=c%5 else l=11 end goto l
 :c=(n==0)*26+(n==1)*27+(n==2)*14+(n==3)*33+(n==4)*23-o :i-- goto19
 :c=(n==0)*17+(n==1)*19+(n==2)*00+(n==3)*18+(n==4)*16-o :i-- goto19
 :c=(n==0)*07+(n==1)*11+(n==2)*28+(n==3)*09+(n==4)*29-o :i-- goto19
@@ -16,4 +16,4 @@ if :i==ind then c=(:c+35)%35 l=c/5+12 n=c%5 else l=10 end goto l
 :c=(n==0)*15+(n==1)*32+(n==2)*05+(n==3)*03+(n==4)*08-o :i-- goto19
 :c=(n==0)*06+(n==1)*01+(n==2)*04+(n==3)*13+(n==4)*12-o :i-- goto19
 :c=(n==0)*20+(n==1)*10+(n==2)*34+(n==3)*22+(n==4)*24-o :i-- goto19
-if num++>=max then o+=add num=0 end goto 2
+if num++>=max then o=o%35+add num=0 end goto 2
