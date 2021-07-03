@@ -17,22 +17,22 @@ for i in range(int(len(base)/2)):
 	ref[a] = b
 	ref[b] = a
 
-s=":i=(n==0)*{:02d}+(n==1)*{:02d}+(n==2)*{:02d}+(n==3)*{:02d}+(n==4)*{:02d}{}"
+s=":c=(n==0)*{:02d}+(n==1)*{:02d}+(n==2)*{:02d}+(n==3)*{:02d}+(n==4)*{:02d}{}"
 def show_line(li, i, end):
 	arr=li[i*5:i*5+5]
 	print(s.format(arr[0], arr[1], arr[2], arr[3], arr[4], end))
 
-def show(name, li, wheel, line):
-	end=" :pw{}=0 goto{}".format(wheel, line)
-	if line > 16:
-		end="-o" + end
+def show(name, li, line):
+	end=" :i++ goto{}".format(line)
+	if line < 16:
+		end="-o :i-- goto{}".format(line)
 
 	print(name)
 	for i in range(6):
 		show_line(li, i, end)
 
-show("base:", base, 3, 9)
-show("reverse:", rev, 1, 17)
+show("base:", base, 9)
+show("reverse:", rev, 17)
 show("\nreflector:", ref, 2, 1)
 
 
