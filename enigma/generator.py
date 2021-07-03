@@ -1,6 +1,6 @@
 import random
 
-base=range(30)
+base=range(35)
 base=random.sample(base, len(base))
 
 rev=list(base)
@@ -24,16 +24,16 @@ def show_line(li, i, end):
 
 def show(name, li, line):
 	end=" :i++ goto{}".format(line)
-	if line < 16:
+	if line > 16:
 		end="-o :i-- goto{}".format(line)
 
 	print(name)
-	for i in range(6):
+	for i in range(7):
 		show_line(li, i, end)
 
-show("base:", base, 9)
-show("reverse:", rev, 17)
-show("\nreflector:", ref, 2, 1)
+show("base:", base, 10)
+show("reverse:", rev, 19)
+show("\nreflector:", ref, 1)
 
 
 
