@@ -1,5 +1,5 @@
 # Enigma Machine simulator in yolol
-Attempt at simulating an enigma machine with a number of yolol chips
+Attempt at simulating an enigma machine with a number of yolol chips.
 
 ### Using Machine:
 - Number goes in and out through `:key`
