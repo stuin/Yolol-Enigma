@@ -2,15 +2,18 @@
 Attempt at simulating an enigma machine with a number of yolol chips.
 
 ### Using Machine:
-- Number goes in and out through `:key`
-- `:log` keeps track of output numbers for easier debugging
-- `:reset=0` will restart machine with default settings, allowing for decryption or a new message
-- wait till reset is -1 before moving on
-- Resetting and inputing the numbers from the log should result in the original inputs
-- generator.py can be used to create new randomized wheel and reflector files
+1. Write message in `:msg` and set `:enigma` to 0
+2. `:log` will show the output message
+3. `:enigma` will reset to -1 to pause the machine when finished
+4. `:reset=0` will restart machine with default settings
+5. Wait till reset is -1 before moving on
+6. Inputing the message from the log after a reset should restore the original message
 
 ### Implementation:
-- `reset` should be used as `chipwait` for the reset chip
-- `i`, `c`, `log`, `key` should be placed in a storage chip
+- `:reset` should be used as `chipwait` for the reset chip
+- The formatting chip should not use any `chipwait`
+- All other chips should use `:enigma` as `chipwait`
+- `:i`, `:c`, `:out`, `:msg`, and `:log` should be placed in a storage chip or other device
 - `ind` controls the order for each wheel, starting at 1 and ending at the reflector
-- each chip should have its own random starting values for `o`, `max`, `num` and `add`
+- Each chip should have its own random starting values for `o`, `max`, `num` and `add`
+- generator.py can be used to create new randomized wheel and reflector files

@@ -23,18 +23,16 @@ def show_line(li, i, end):
 	arr=li[i*5:i*5+5]
 	print(s.format(arr[0], arr[1], arr[2], arr[3], arr[4], end))
 
-def show(name, li, line):
-	end=" :i++ goto{}".format(line)
-	if line > 16:
-		end="-o :i-- goto{}".format(line)
+def show(name, li, end, line):
+	end="{} goto{}".format(end, line)
 
 	print(name)
 	for i in range(7):
 		show_line(li, i, end)
 
-show("base:", base, 10)
-show("reverse:", rev, 19)
-show("\nreflector:", ref, 1)
+show("base:", base, " :i++", 10)
+show("reverse:", rev, "-o :i--", 19)
+show("\nreflector:", ref, " :i--", 1)
 
 
 

@@ -1,8 +1,8 @@
 :reset=-1 lastind=3
 if :reset<0 then goto2 end
-if :i==-1 then :i=1 :c=1 :log="" else goto3 end
+if :i==-1 then :i=1 :c=1 :log="" :msg="" :enigma=0 else goto3 end
 if :i<lastind then goto4 end
 
-:i=-1 :reset=-1 goto 2
+:i=-1 :reset=-1 :enigma=-1 goto 2
 
 //chipwait=reset
