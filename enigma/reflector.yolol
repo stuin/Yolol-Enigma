@@ -1,5 +1,5 @@
-l=2 ind=3
-if :i==ind and :reset then c=(:c+35)%35 l=c/5+3 n=c%5 end goto l
+g=2 ind=3
+if :i==ind and :reset then c=(:c+35)%35 g=c/5+3 n=c%5 end gotog
 :c=(n==0)*20+(n==1)*10+(n==2)*33+(n==3)*30+(n==4)*13 :i-- goto1
 :c=(n==0)*06+(n==1)*05+(n==2)*29+(n==3)*34+(n==4)*14 :i-- goto1
 :c=(n==0)*01+(n==1)*23+(n==2)*12+(n==3)*04+(n==4)*09 :i-- goto1
