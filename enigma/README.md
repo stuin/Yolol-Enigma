@@ -20,7 +20,10 @@ Attempt at simulating an enigma machine with a number of yolol chips.
 - `:reset` should be used as `chipwait` for the reset chip
 - The formatting chip should not use any `chipwait`
 - All other chips should use `:start` as `chipwait`
-- `:i`, `:c`, `:out`, `:msg`, `:log`, and `:format` should be placed in a storage chip or other device
+- Formatting and reset can be basic chips, but the rest should be at least advanced
+- `:i`, `:c`, `:out`, `:msg`, `:log` should be placed in a storage chip or other device
+- `:reset` and `:start` should be toggle buttons with `on=0` and `off=-1`
+- `:format` can be a default toggle button
 - `ind` controls the order for each wheel, starting at 1 and ending at the reflector
 - Each chip should have its own random starting values for `o`, `max`, `num` and `add`
 - generator.py can be used to create new randomized wheel and reflector files

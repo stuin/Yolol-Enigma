@@ -5,7 +5,7 @@ if :msg=="" then goto2 end c=:msg c-=:msg-- goto c>"a"+c>"j"+c>"s"+3
 :c=c>"j"+c>"k"+c>"l"+c>"m"+c>"n"+c>"o"+c>"p"+c>"q"+c>"r"+18 :i=1 goto7
 :c=c>"s"+c>"t"+c>"u"+c>"v"+c>"w"+c>"x"+c>"y"+c>"z"+27 :i=1 goto7
 if :i==0 then :out=(:c+35)%35 :i=-1 :c=0 else goto 7 end
-if :msg=="" and :format==0 then :start=-1 else goto 2 end
+if :msg=="" then :start=:format-1 else goto 2 end
 if :format and :out>-1 then goto9 else :out=0 :start=-1 goto2 end
 
 //chipwait=start
