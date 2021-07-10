@@ -17,4 +17,4 @@ if :i==ind then c=(:c+35)%35 l=c/5+12 n=c%5 else l=11 end goto l
 :c=(n==0)*06+(n==1)*01+(n==2)*04+(n==3)*13+(n==4)*12-o :i-- goto19
 :c=(n==0)*20+(n==1)*10+(n==2)*34+(n==3)*22+(n==4)*24-o :i-- goto19
 if num++>=max then o=o%35+add num=0 end goto 2
-//chipwait=enigma
+//chipwait=start
