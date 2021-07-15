@@ -16,5 +16,5 @@ if :i==ind then c=(:c+35)%35 g=c/5+12 n=c%5 else g=11 end goto g
 :c=(n==0)*15+(n==1)*32+(n==2)*05+(n==3)*03+(n==4)*08-o :i-- goto19
 :c=(n==0)*06+(n==1)*01+(n==2)*04+(n==3)*13+(n==4)*12-o :i-- goto19
 :c=(n==0)*20+(n==1)*10+(n==2)*34+(n==3)*22+(n==4)*24-o :i-- goto19
-if num++>=max then o=o%35+add num=0 end goto 2
+if num++>=max then o=(o+add)%35 num=0 end goto 2
 //chipwait=start
