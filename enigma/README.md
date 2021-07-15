@@ -13,8 +13,10 @@ Attempt at simulating an enigma machine with a number of yolol chips.
 - By default the enigma machine supports 35 characters, ` #$+,-./_` and all the lowercase letters
 - Setting `:format=1` will create issues during encryption, but will allow for other letters to be displayed in the log when decrypting the original
 	1. Placing `$` before a letter will make the letter uppercase
+	2. Placing `#` before a letter will get the numerical value, starting at `a=1` and `_=0`
 	2. `$ ` will become tab
 	3. `$,` will become enter
+	4. `$+=*`, `$#=#`, `$.=$`, `$/=%`
 
 ### Implementation:
 - `:reset` should be used as `chipwait` for the reset chip

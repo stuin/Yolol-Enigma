@@ -1,6 +1,6 @@
 s1="1 2#3$4+5,6-7.8/9_" s2="10a11b12c13d14e15f16g17h18i" :out=-1
 s3="19j20k21l22m23n24o25p26q27r" s4="28s29t30u31v32w33x34y35z"
-s5="1\t2#3$4+5\n6-7.8/9_" s6="10A11B12C13D14E15F16G17H18I" lo=""
+s5="1\t2#3$4*5\n6-7$8%9_" s6="10A11B12C13D14E15F16G17H18I" lo=""
 s7="19J20K21L22M23N24O25P26Q27R" s8="28S29T30U31V32W33X34Y35Z"
 if :out==-1 then goto5 else n=:out+1 c=n+"" goto 6+n>9+n>18+n>27 end
 o=s1-c-"1 "-"2#"-"3$"-"4+"-"5,"-"6-"-"7."-"8/"-"9_"          goto10
@@ -8,9 +8,10 @@ o=s2-c-"10a"-"11b"-"12c"-"13d"-"14e"-"15f"-"16g"-"17h"-"18i" goto10
 o=s3-c-"19j"-"20k"-"21l"-"22m"-"23n"-"24o"-"25p"-"26q"-"27r" goto10
 o=s4-c-"28s"-"29t"-"30u"-"31v"-"32w"-"33x"-"34y"-"35z"       goto10
 if not :format then :log=o+:log :out=-1 goto5 end
+if o=="#" then lo=ln-9+"" :out=-1 goto5 end
 if o=="$" then n=ln else :log=lo+:log lo=o ln=n :out=-1 goto5 end
-c=n+"" :out=-1 goto 13+n>9+n>18+n>27
-lo=s5-c-"1\t"-"2#"-"3$"-"4+"-"5\n"-"6-"-"7."-"8/"-"9_"        goto5
+c=n+"" :out=-1 goto 14+n>9+n>18+n>27
+lo=s5-c-"1\t"-"2#"-"3$"-"4*"-"5\n"-"6-"-"7$"-"8%"-"9_"        goto5
 lo=s6-c-"10A"-"11B"-"12C"-"13D"-"14E"-"15F"-"16G"-"17H"-"18I" goto5
 lo=s7-c-"19J"-"20K"-"21L"-"22M"-"23N"-"24O"-"25P"-"26Q"-"27R" goto5
 lo=s8-c-"28S"-"29T"-"30U"-"31V"-"32W"-"33X"-"34Y"-"35Z"       goto5
