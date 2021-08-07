@@ -1,8 +1,10 @@
-:reset=-1 lastind=3
-if :reset<0 then goto2 end
-if :i==-1 then :i=1 :c=1 :log="" :msg="" :start=0 else goto3 end
-if :i<lastind then :start=0 goto4 end
+:reset=-1 lastind=3 :config=0
+if :reset<0 then goto2 else goto :config+4 end
+:chip1=218190 :chip2=86171 :chip3=3 goto 7
+
+
+
+if :i==-1 then :i=1 :c=1 :log="" :msg="" :start=0 else goto7 end
+if :i<lastind then :start=0 goto8 end
 
 :i=-1 :reset=-1 :start=-1 :log="" goto 2
-
-//chipwait=reset

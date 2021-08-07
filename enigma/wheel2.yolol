@@ -1,4 +1,4 @@
-o=12 max=0 num=0 add=2 ind=2
+i=:chip2+1 ind=i%35 i/=35 o=i%35-i%1 i/=35 max=i%35 add=i/35%35 num=0
 if :i==ind then c=(:c+o+35)%35 g=c/5+3 n=c%5 else g=2 end goto g
 :c=(n==0)*13+(n==1)*20+(n==2)*05+(n==3)*17+(n==4)*07 :i++ goto10
 :c=(n==0)*15+(n==1)*11+(n==2)*30+(n==3)*25+(n==4)*10 :i++ goto10
@@ -7,7 +7,7 @@ if :i==ind then c=(:c+o+35)%35 g=c/5+3 n=c%5 else g=2 end goto g
 :c=(n==0)*34+(n==1)*27+(n==2)*21+(n==3)*09+(n==4)*22 :i++ goto10
 :c=(n==0)*01+(n==1)*00+(n==2)*18+(n==3)*03+(n==4)*33 :i++ goto10
 :c=(n==0)*29+(n==1)*14+(n==2)*02+(n==3)*04+(n==4)*12 :i++ goto10
-if :reset==0 then goto 1 end
+if :reset==0 then goto 1 else add-=add%1 end
 if :i==ind then c=(:c+35)%35 g=c/5+12 n=c%5 else g=11 end goto g
 :c=(n==0)*26+(n==1)*25+(n==2)*32+(n==3)*28+(n==4)*33-o :i-- goto19
 :c=(n==0)*02+(n==1)*17+(n==2)*04+(n==3)*12+(n==4)*23-o :i-- goto19
@@ -17,4 +17,3 @@ if :i==ind then c=(:c+35)%35 g=c/5+12 n=c%5 else g=11 end goto g
 :c=(n==0)*08+(n==1)*16+(n==2)*21+(n==3)*18+(n==4)*30-o :i-- goto19
 :c=(n==0)*07+(n==1)*13+(n==2)*11+(n==3)*29+(n==4)*20-o :i-- goto19
 if num++>=max then o=(o+add)%35 num=0 end goto 2
-//chipwait=start
